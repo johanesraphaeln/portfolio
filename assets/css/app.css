@@ -58,28 +58,6 @@ header.navbar-container .nav-list li:hover a {
   font-weight: bold;
 }
 
-/* main {
-  max-width: 1200px;
-  width: 100%;
-  margin-inline: auto;
-  padding: 2rem 4rem;
-  flex: 1;
-
-  display: flex;
-  align-items: center;
-} */
-
-/* main {
-  max-width: 1200px;
-  width: 100%;
-  margin-inline: auto;
-  padding: 2rem 4rem;
-  flex: 1;
-
-  display: flex;
-  align-items: center;
-} */
-
 main {
   max-width: 1200px;
   width: 100%;
@@ -88,21 +66,17 @@ main {
   align-items: center;
 }
 
-aside {
+/* aside {
   flex: 1;
-}
+} */
 
-.profile header {
+.profile {
   text-align: center;
 }
 
 .profile img {
   width: 250px;
   border-radius: 999px;
-}
-
-.profile section {
-  text-align: center;
 }
 
 .profile figure figcaption {
@@ -114,8 +88,49 @@ aside {
   padding: 0 170px;
 }
 
+#content h2 {
+  text-align: center;
+}
+
+#project>p {
+  text-align: center;
+}
+
+#project img {
+  max-width: 100%;
+  height: auto;
+}
+
+#contact>p {
+  text-align: center;
+}
+
+#contact ul {
+  padding: 1.5rem 1rem;
+  margin: auto;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+#contact ul li {
+  list-style-type: none;
+}
+
+#contact ul li a {
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: black;
+  transition: all 0.1s ease-in-out;
+  padding: 0.5rem 1.5rem;
+}
+
 .card {
-  border: 1px solid black;
+  padding: 20px;
+  margin-bottom: 30px;
 }
 
 footer {
@@ -123,4 +138,7 @@ footer {
   color: #fff;
   background-color: black;
   text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
