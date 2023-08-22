@@ -22,7 +22,6 @@ header.navbar-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   padding-block: 1rem;
   z-index: 999;
 }
@@ -97,11 +96,13 @@ aside {
   text-align: center;
 }
 
-.project>p {
+.project>p,
+.experience>p {
   text-align: center;
 }
 
-.project img {
+.project img, 
+.experience img {
   max-width: 100%;
   height: auto;
 }
