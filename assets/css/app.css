@@ -65,8 +65,11 @@ main {
 
 aside {
   flex: 1;
+  position: sticky;
+  top: 0;
+  align-self: flex-start; /* Align to the start of the flex container */
+  margin-top: 20px; /* Adjust this value as needed */
 }
-
 #content {
   flex: 5;
   display: flex; 
@@ -151,6 +154,8 @@ footer {
 
   main aside {
     align-self: center;
+    position: relative; /* Reset position for smaller screens */
+    top: initial; /* Reset top value for smaller screens */
   }
 }
 
