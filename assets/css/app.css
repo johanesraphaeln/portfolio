@@ -70,11 +70,14 @@ aside {
   align-self: flex-start; /* Align to the start of the flex container */
   margin-top: 20px; /* Adjust this value as needed */
 }
+
 #content {
   flex: 5;
-  display: flex; 
+  display: flex;
   flex-flow: column nowrap;
   gap: 1rem 2rem;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
 }
 
 .about {
@@ -99,12 +102,12 @@ aside {
   text-align: center;
 }
 
-.project>p,
-.experience>p {
+.project > p,
+.experience > p {
   text-align: center;
 }
 
-.project img, 
+.project img,
 .experience img {
   max-width: 100%;
   height: auto;
@@ -159,7 +162,7 @@ footer {
   }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   nav ul {
     justify-content: center;
   }
@@ -167,4 +170,15 @@ footer {
   main aside {
     align-self: stretch;
   }
+}
+
+#content {
+  width: 60%; /* Set your desired width for the content */
+  max-width: 800px; /* Set a maximum width for the content */
+  center: auto
+}
+
+.card img {
+  max-width: 100%; /* Ensure images don't exceed the width of their container */
+  height: auto; /* Maintain the aspect ratio of images */
 }
