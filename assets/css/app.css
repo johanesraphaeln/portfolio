@@ -70,7 +70,7 @@ main {
   gap: 1rem 2rem;
   align-items: center;
   justify-content: center;
-  max-width: 60%;
+  max-width: 80%;
   center: auto;
 }
 
@@ -102,14 +102,16 @@ main {
 
 .contact ul {
   padding: 1.5rem 1rem;
-  gap: 1rem; /* Adjusted for mobile */
-  flex-direction: column; /* Adjusted for mobile */
-  align-items: center; /* Adjusted for mobile */
-  justify-content: center; /* Adjusted for mobile */
+  gap: 2rem; /* Adjusted for mobile - adjust the gap as needed */
+  display: flex; /* Set to flex container */
+  flex-direction: row; /* Display items horizontally */
+  align-items: center; /* Adjusted for mobile - you can remove this if not needed */
+  justify-content: center; /* Adjusted for mobile - you can remove this if not needed */
 }
 
 .contact ul li {
   list-style-type: none;
+  margin-right: 2rem;
 }
 
 .contact ul li a {
