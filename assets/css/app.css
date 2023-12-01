@@ -10,7 +10,6 @@ body {
   height: 100vh;
   font-family: 'Poppins', sans-serif;
   margin: 0;
-
   display: flex;
   flex-direction: column;
 }
@@ -63,30 +62,25 @@ main {
   gap: 1.5rem;
 }
 
-aside {
-  flex: 1;
-  position: sticky;
-  top: 0;
-  align-self: flex-start; /* Align to the start of the flex container */
-  margin-top: 20px; /* Adjust this value as needed */
-}
-
 #content {
   flex: 5;
+  flow-grow: 1;
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem 2rem;
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center items horizontally */
+  align-items: center;
+  justify-content: center;
+  max-width: 60%;
+  center: auto;
 }
 
 .about {
   text-align: center;
-  position: sticky;
+  position: static; /* Changed for mobile */
 }
 
 .about img {
-  width: 250px;
+  width: 100%; /* Full width for mobile */
   border-radius: 999px;
 }
 
@@ -102,30 +96,16 @@ aside {
   text-align: center;
 }
 
-.project > p,
-.experience > p {
-  text-align: center;
-}
-
-.project img,
-.experience img {
-  max-width: 100%;
-  height: auto;
-}
-
 .contact {
   text-align: center;
 }
 
 .contact ul {
   padding: 1.5rem 1rem;
-  margin: auto;
-
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 8rem;
+  gap: 1rem; /* Adjusted for mobile */
+  flex-direction: column; /* Adjusted for mobile */
+  align-items: center; /* Adjusted for mobile */
+  justify-content: center; /* Adjusted for mobile */
 }
 
 .contact ul li {
@@ -143,6 +123,15 @@ aside {
   margin-bottom: 20px;
 }
 
+aside {
+  flex: 1;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  margin-top: 20px;
+  order: 2; /* Change order for mobile */
+}
+
 footer {
   padding: 20px;
   color: #fff;
@@ -150,35 +139,38 @@ footer {
   text-align: center;
 }
 
-@media screen and (max-width: 1200px) {
-  main {
-    flex-flow: column nowrap;
-  }
-
-  main aside {
-    align-self: center;
-    position: relative; /* Reset position for smaller screens */
-    top: initial; /* Reset top value for smaller screens */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  nav ul {
-    justify-content: center;
-  }
-
-  main aside {
-    align-self: stretch;
-  }
-}
-
-#content {
-  width: 60%; /* Set your desired width for the content */
-  max-width: 800px; /* Set a maximum width for the content */
-  center: auto
-}
-
 .card img {
-  max-width: 100%; /* Ensure images don't exceed the width of their container */
-  height: auto; /* Maintain the aspect ratio of images */
+  max-width: 100%;
+  height: auto;
 }
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 767px) {
+  header.navbar-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  header.navbar-container .nav-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  main {
+    flex-direction: column; /* Adjusted for mobile */
+  }
+
+  #content {
+    width: 100%;
+    max-width: none;
+  }
+
+  .contact ul {
+    gap: 0.5rem;
+  }
+}
+
