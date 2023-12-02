@@ -146,6 +146,11 @@ footer {
   height: auto;
 }
 
+.swiper {
+  width: 600px;
+  height: 100%;
+}
+
 /* Media Query for Mobile Devices */
 @media screen and (max-width: 767px) {
   header.navbar-container {
@@ -175,4 +180,3 @@ footer {
     gap: 0.5rem;
   }
 }
-
