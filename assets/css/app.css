@@ -80,8 +80,9 @@ main {
 }
 
 .about img {
-  width: 100%; /* Full width for mobile */
+  width: 100%;
   border-radius: 999px;
+  border: 1px solid #333;
 }
 
 .about figure figcaption {
@@ -144,6 +145,7 @@ footer {
 .card img {
   max-width: 100%;
   height: auto;
+  border: 1px solid #333;
 }
 
 .swiper {
